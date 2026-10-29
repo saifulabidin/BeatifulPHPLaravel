@@ -1,0 +1,20 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app/
+        - bootstrap/
+        - config/
+        - database/
+        - routes/
+
+    # Level 8 enforces strict typing on all parameters and returns
+    level: 8
+
+    ignoreErrors:
+        # Ignore false positives with Eloquent dynamic scopes if needed
+
+    checkGenericClassInNonGenericObjectType: true
+    checkMissingIterableValueType: true
+    checkMissingCallableSignature: true

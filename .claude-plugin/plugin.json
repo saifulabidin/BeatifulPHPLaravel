@@ -1,0 +1,30 @@
+{
+  "name": "beautiful-php-laravel",
+  "version": "1.0.0",
+  "description": "Write, review, port, and enforce idiomatic modern PHP (8.3 - 8.5) and Laravel 13.x: three skills distilled from enterprise Laravel architecture, Eloquent performance patterns, Pest testing, and modern PHP safety guidelines, plus drop-in Pint and Larastan configs.",
+  "license": "MIT",
+  "author": {
+    "name": "Saiful Abidin",
+    "url": "https://github.com/saifulabidin"
+  },
+  "homepage": "https://github.com/saifulabidin/BeatifulPHPLaravel",
+  "repository": "https://github.com/saifulabidin/BeatifulPHPLaravel",
+  "keywords": [
+    "php",
+    "laravel",
+    "laravel13",
+    "php83",
+    "php84",
+    "php85",
+    "best-practices",
+    "code-review",
+    "migration",
+    "porting",
+    "pest",
+    "pint",
+    "larastan",
+    "clean-architecture",
+    "eloquent",
+    "solid"
+  ]
+}

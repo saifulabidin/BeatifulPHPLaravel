@@ -1,0 +1,11 @@
+{
+  "name": "beautiful-php-laravel",
+  "displayName": "Beautiful PHP & Laravel",
+  "description": "Production-grade, idiomatic modern PHP (8.3 - 8.5) and Laravel 13.x skill suite for AI coding agents.",
+  "version": "1.0.0",
+  "category": "Development",
+  "author": "Saiful Abidin",
+  "homepage": "https://github.com/saifulabidin/BeatifulPHPLaravel",
+  "repository": "https://github.com/saifulabidin/BeatifulPHPLaravel",
+  "tags": ["php", "laravel", "architecture", "pest", "eloquent"]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "beautiful-php-laravel",
+  "version": "1.0.0",
+  "description": "Agent skills and tooling for modern, idiomatic PHP 8.3 and Laravel development.",
+  "license": "MIT",
+  "author": "saifulabidin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saifulabidin/BeatifulPHPLaravel.git"
+  },
+  "keywords": [
+    "agentskills",
+    "php",
+    "laravel",
+    "pest",
+    "clean-code",
+    "eloquent"
+  ],
+  "files": [
+    "skills",
+    "rules",
+    "lints",
+    "plugin.json"
+  ]
+}

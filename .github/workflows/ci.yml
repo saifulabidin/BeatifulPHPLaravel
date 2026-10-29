@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-skills:
+    name: Validate Skills & Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Run Skill Linter & Size Budget Checks
+        run: python3 scripts/check-skills.py
+
+      - name: Run Unit Tests
+        run: python3 -m unittest discover -s tests -v
+
+  validate-tooling-presets:
+    name: Validate PHP & Tooling Presets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Lint PHP Tooling Configurations
+        run: php -l lints/rector.php
+
+      - name: Validate JSON Manifests
+        run: |
+          python3 -c "
+          import json, glob
+          targets = ['plugin.json', 'package.json', 'lints/pint.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json']
+          for path in targets:
+              with open(path) as f:
+                  json.load(f)
+              print(f'Valid JSON: {path}')
+          "
